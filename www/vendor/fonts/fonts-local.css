@@ -1,0 +1,17 @@
+/* Local Fonts Fallback - No external dependencies */
+/* Cairo Arabic Font - System fallback */
+@font-face {
+  font-family: 'Cairo';
+  font-style: normal;
+  font-weight: 300-900;
+  font-display: swap;
+  src: local('Segoe UI'), local('Tahoma'), local('Arial'), sans-serif;
+}
+/* Inter Latin Font - System fallback */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300-700;
+  font-display: swap;
+  src: local('Segoe UI'), local('Tahoma'), local('Arial'), sans-serif;
+}

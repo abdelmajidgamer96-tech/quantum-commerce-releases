@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Commerce Pro — Sovereign Commerce Platform</title>
+    <link rel="stylesheet" href="www/vendor/fonts/fonts-local.css">
+    <link rel="stylesheet" href="www/vendor/fontawesome/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #07090e;
+            --bg-card: #0f131d;
+            --primary-blue: #0066ff;
+            --primary-glow: rgba(0, 102, 255, 0.4);
+            --accent-green: #00e676;
+            --accent-glow: rgba(0, 230, 118, 0.3);
+            --text-white: #ffffff;
+            --text-muted: #94a3b8;
+            --border-line: rgba(255, 255, 255, 0.08);
+            --radius-lg: 20px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', 'Inter', sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-white); line-height: 1.6; }
+
+        nav {
+            padding: 20px 60px; display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--border-line); background: rgba(15, 19, 29, 0.88); backdrop-filter: blur(15px); position: sticky; top: 0; z-index: 1000;
+        }
+
+        .logo-box { display: flex; align-items: center; gap: 15px; font-size: 1.5rem; font-weight: 900; }
+        .logo-box i { color: var(--primary-blue); filter: drop-shadow(0 0 10px var(--primary-glow)); }
+
+        .nav-actions { display: flex; align-items: center; gap: 15px; }
+        .select-box {
+            background: #080a10; color: #fff; border: 1px solid var(--border-line); padding: 8px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 700; outline: none; cursor: pointer;
+        }
+
+        .btn {
+            padding: 12px 28px; border-radius: 12px; font-weight: 700; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; border: none; transition: all 0.3s;
+        }
+        .btn-primary { background: linear-gradient(135deg, #0066ff 0%, #0044cc 100%); color: #fff; box-shadow: 0 4px 25px var(--primary-glow); }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(0, 102, 255, 0.6); }
+
+        .hero { padding: 90px 60px; text-align: center; max-width: 1200px; margin: 0 auto; }
+        .hero-badge {
+            background: rgba(0, 102, 255, 0.12); color: var(--primary-blue); border: 1px solid var(--primary-blue); padding: 8px 22px; border-radius: 30px; font-size: 0.9rem; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 30px;
+        }
+        .hero h1 {
+            font-size: 3.4rem; font-weight: 900; line-height: 1.2; margin-bottom: 24px; background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 800px; margin: 0 auto 40px; }
+
+        .plans-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; padding: 40px 60px; max-width: 1300px; margin: 0 auto; }
+        .plan-card { background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-lg); padding: 40px; position: relative; transition: all 0.3s; }
+        .plan-card:hover { border-color: var(--primary-blue); transform: translateY(-6px); }
+        .plan-card.featured { border-color: var(--accent-green); box-shadow: 0 10px 40px var(--accent-glow); }
+
+        .plan-price { font-size: 2.2rem; font-weight: 900; margin: 20px 0; color: var(--accent-green); }
+
+        .license-order-box {
+            background: var(--bg-card); border: 1px solid var(--border-line); border-radius: var(--radius-lg); padding: 40px; max-width: 800px; margin: 40px auto 80px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 700; color: var(--text-white); }
+        .form-control { width: 100%; padding: 14px; background: #07090e; border: 1px solid var(--border-line); border-radius: 10px; color: #fff; font-size: 1rem; outline: none; }
+        .form-control:focus { border-color: var(--primary-blue); }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid var(--border-line); color: var(--text-muted); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-box">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Quantum Commerce Pro</span>
+        </div>
+        <div class="nav-actions">
+            <!-- Currency Selector (USD / DZD / EUR) -->
+            <select id="saas-curr-select" class="select-box">
+                <option value="USD" selected>&#x1F1FA;&#x1F1F8; USD ($)</option>
+                <option value="DZD">&#x1F1E9;&#x1F1FF; DZD (&#x62F;&#x62C;)</option>
+                <option value="EUR">&#x1F1EA;&#x1F1FA; EUR (&euro;)</option>
+            </select>
+            <!-- Language Selector -->
+            <select id="saas-lang-select" class="select-box">
+                <option value="en" selected>&#x1F1FA;&#x1F1F8; English</option>
+                <option value="ar">&#x1F1E9;&#x1F1FF; &#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
+                <option value="fr">&#x1F1EB;&#x1F1F7; Fran&ccedil;ais</option>
+                <option value="es">&#x1F1EA;&#x1F1F8; Espa&ntilde;ol</option>
+                <option value="de">&#x1F1E9;&#x1F1EA; Deutsch</option>
+                <option value="ru">&#x1F1F7;&#x1F1FA; &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</option>
+                <option value="ja">&#x1F1EF;&#x1F1F5; &#x65E5;&#x672C;&#x8A9E;</option>
+            </select>
+            <a href="https://www.mediafire.com/file/xjbw2bkzjur72kn/QuantumCommercePro-Setup-v1.0.0.exe/file" target="_blank" class="btn btn-primary">
+                <i class="fa-solid fa-download"></i>
+                <span data-i18n="btn_download_now">Download Windows Setup (.exe)</span>
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span data-i18n="hero_badge">Official Enterprise Platform v1.1.0 — 2026</span>
+        </div>
+        <h1 data-i18n="hero_title">Sales, Inventory & Debt Management with Local AI Intelligence</h1>
+        <p data-i18n="hero_sub">Comprehensive commerce platform tailored for stores and global enterprises. Ultra-fast POS cashier, currency exchange engine, and Thermal A4/80mm receipt printing.</p>
+        
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+            <a href="https://www.mediafire.com/file/xjbw2bkzjur72kn/QuantumCommercePro-Setup-v1.0.0.exe/file" target="_blank" class="btn btn-primary" style="font-size:1.1rem; padding:18px 36px;">
+                <i class="fa-solid fa-download"></i>
+                <span data-i18n="btn_hero_download">Download Direct Setup.exe</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Official Video Showcase Section -->
+    <section class="demo-showcase" id="video-showcase" style="max-width:1000px; margin:40px auto 60px; text-align:center; padding:0 20px;">
+        <h2 style="font-size:2.2rem; font-weight:900; margin-bottom:12px; background:linear-gradient(135deg, #fff 0%, #a855f7 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent;" data-i18n="video_section_title">
+            <i class="fa-solid fa-circle-play" style="color:var(--accent-green);"></i> Quantum Commerce Pro Official Demo Video
+        </h2>
+        <p style="color:var(--text-muted); font-size:1.05rem; margin-bottom:30px;" data-i18n="video_section_desc">Watch the live showcase of POS Cashier, Currency Exchange Engine & AI OCR Invoice Processing:</p>
+
+        <div style="background:#07090e; border-radius:var(--radius-lg); border:1px solid var(--accent-green); box-shadow:0 0 35px var(--accent-glow); overflow:hidden;">
+            <!-- Real YouTube Embed -->
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                <iframe
+                    src="https://www.youtube.com/embed/o2eJxrXDtCs?rel=0&modestbranding=1&showinfo=0"
+                    title="Quantum Commerce Pro — Official Demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;">
+                </iframe>
+            </div>
+            <div style="padding:20px; text-align:center;">
+                <a href="https://youtu.be/o2eJxrXDtCs" target="_blank" class="btn btn-primary" style="display:inline-flex; align-items:center; gap:10px;">
+                    <i class="fa-brands fa-youtube" style="font-size:1.2rem;"></i> Watch on YouTube
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Grid Section -->
+    <section class="plans-grid">
+        <div class="plan-card">
+            <h3 data-i18n="plan_free_title">النسخة التجريبية (Free Demo)</h3>
+            <p style="color:var(--text-muted);" data-i18n="plan_free_desc">لتجربة المنصة والكاشير في المحل</p>
+            <div class="plan-price" data-i18n="plan_free_price">مجاناً 100%</div>
+            <ul style="list-style:none; line-height:2.2; color:var(--text-muted); margin-bottom:24px;">
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_pos">كاشير POS سريع وسلس</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_inventory">تجربة إدارة المخزن والمبيعات</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_langs">دعم اللغات الـ 7 الكاملة</span></li>
+            </ul>
+            <a href="https://www.mediafire.com/file/xjbw2bkzjur72kn/QuantumCommercePro-Setup-v1.0.0.exe/file" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="btn_try_free">تنزيل وتجربة مجانية</a>
+        </div>
+
+        <div class="plan-card featured">
+            <div style="position:absolute; top:-14px; right:30px; background:var(--accent-green); color:#000; padding:4px 16px; border-radius:20px; font-size:0.8rem; font-weight:900;" data-i18n="badge_recommended">الخيار الأكثر طلباً للتجار</div>
+            <h3 data-i18n="plan_store_title">الترخيص الدائم للمحلات (Store Perpetual)</h3>
+            <p style="color:var(--text-muted);" data-i18n="plan_store_desc">ملكية دائمة مدى الحياة لمحل تجاري</p>
+            <div class="plan-price" id="price-store-display">$390 <span style="font-size:1rem; color:var(--text-muted);">(60,000 دج)</span></div>
+            <ul style="list-style:none; line-height:2.2; color:var(--text-muted); margin-bottom:24px;">
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_lifetime">ترخيص ملكية مدى الحياة لمرة واحدة</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_unlimited">منتجات ومبيعات وديون غير محدودة</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_ai">الذكاء الاصطناعي المحلي Quantum AI</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_support">دعم فني وتثبيت مجاني سنة كاملة</span></li>
+            </ul>
+            <a href="#order-form" class="btn btn-primary" style="width:100%; justify-content:center; background:linear-gradient(135deg, #00e676 0%, #00c853 100%); color:#000;" data-i18n="btn_order_store">طلب تفعيل الرخصة الكرتونية</a>
+        </div>
+
+        <div class="plan-card">
+            <h3 data-i18n="plan_enterprise_title">ترخيص الشركات الكبرى (Enterprise Suite)</h3>
+            <p style="color:var(--text-muted);" data-i18n="plan_enterprise_desc">المؤسسات، الفروع المزدوجة والمستودعات</p>
+            <div class="plan-price" id="price-enterprise-display">$1000 <span style="font-size:1rem; color:var(--text-muted);">(150,000 دج)</span></div>
+            <ul style="list-style:none; line-height:2.2; color:var(--text-muted); margin-bottom:24px;">
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_branches">ربط عدة فروع ومستودعات في وقت واحد</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_cloud">نسخ احتياطي سحابي تلقائي وتشفير عالي</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_training">تكوين مخصص وتدريب للعمال والمحاسبيل</span></li>
+            </ul>
+            <a href="#order-form" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="btn_order_enterprise">طلب ترخيص شركة</a>
+        </div>
+    </section>
+
+    <!-- Contact Founder for Official License Activation -->
+    <div style="background:var(--bg-card); border:1px solid var(--accent-green); border-radius:var(--radius-lg); padding:30px; max-width:800px; margin:20px auto 40px; text-align:center; box-shadow:0 0 20px var(--accent-glow);">
+        <h3 style="color:var(--accent-green); margin-bottom:10px;"><i class="fa-solid fa-user-shield"></i> <span data-i18n="founder_key_title">تواصل مع المؤسس للحصول على مفتاح التفعيل التجاري</span></h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:20px;" data-i18n="founder_key_desc">مفاتيح التفعيل التجارية مخصصة لكل عميل رسمياً. تواصل معنا مباشرة عبر الواتساب لتسلم مفتاحك وتفعيل جميع خصائص المنصة في دقائق:</p>
+        <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
+            <a href="https://wa.me/213791140239?text=Hello,%20I%20want%20to%20get%20my%20Quantum%20Commerce%20Pro%20License%20Key" target="_blank" class="btn" style="background:linear-gradient(135deg, #00e676 0%, #00c853 100%); color:#000; font-weight:700;">
+                <i class="fa-brands fa-whatsapp"></i> <span data-i18n="btn_contact_founder">التواصل واستلام المفتاح الآن (WhatsApp)</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Order & Contact Form -->
+    <div class="license-order-box" id="order-form">
+        <h2 style="text-align:center; margin-bottom:10px;"><i class="fa-solid fa-paper-plane" style="color:var(--primary-blue);"></i> <span data-i18n="form_title">نموذج طلب الترخيص والتفعيل الرسمي</span></h2>
+        <p style="text-align:center; color:var(--text-muted); margin-bottom:30px;" data-i18n="form_desc">أرسل طلبك وسيتواصل معك المستشار التقني هاتفياً لتسليمك كود التفعيل وتثبيت البرنامج فوراً:</p>
+
+        <!-- Payment Gateways Box -->
+        <div style="background:rgba(15,23,42,0.8); border:1px solid var(--border-line); border-radius:12px; padding:20px; margin-bottom:25px;">
+            <h4 style="color:var(--accent-green); margin-bottom:15px; text-align:center;"><i class="fa-solid fa-credit-card"></i> <span data-i18n="payment_methods_title">Accepted Payment Methods for Direct Activation:</span></h4>
+            
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:12px; margin-bottom:15px;">
+                <!-- BaridiMob / CCP -->
+                <div style="background:#07090e; padding:12px; border-radius:8px; border:1px solid rgba(0,230,118,0.3); text-align:center;">
+                    <div style="font-weight:bold; color:#00e676; margin-bottom:5px; font-size:0.9rem;"><i class="fa-solid fa-building-columns"></i> CCP / BaridiMob</div>
+                    <small style="color:var(--text-muted); display:block; font-size:0.78rem; font-family:monospace; font-weight:bold;">RIP: 00799999004394516724</small>
+                    <small style="color:var(--accent-green); display:block; font-size:0.75rem; margin-top:2px;">Instant DZD Direct Payment</small>
+                </div>
+                
+                <!-- Grey Bank UK / Visa -->
+                <div style="background:#07090e; padding:12px; border-radius:8px; border:1px solid rgba(168,85,247,0.3); text-align:center;">
+                    <div style="font-weight:bold; color:#a855f7; margin-bottom:5px; font-size:0.9rem;"><i class="fa-solid fa-credit-card"></i> Grey UK / Visa Card</div>
+                    <small style="color:var(--text-muted); display:block; font-size:0.75rem;">UK IBAN &amp; Direct Visa Pay</small>
+                    <small style="color:var(--text-muted); display:block; font-size:0.75rem;">Instant GBP / EUR / USD</small>
+                </div>
+
+                <!-- Webit Pay / Crypto -->
+                <div style="background:#07090e; padding:12px; border-radius:8px; border:1px solid rgba(234,179,8,0.3); text-align:center;">
+                    <div style="font-weight:bold; color:#eab308; margin-bottom:5px; font-size:0.9rem;"><i class="fa-solid fa-coins"></i> Webit Pay / Crypto</div>
+                    <small style="color:var(--text-muted); display:block; font-size:0.75rem;">USDT (TRC20 / ERC20)</small>
+                    <small style="color:var(--text-muted); display:block; font-size:0.75rem;">Fast Digital Crypto Pay</small>
+                </div>
+
+                <!-- WhatsApp & Direct Phone -->
+                <div style="background:#07090e; padding:12px; border-radius:8px; border:1px solid rgba(37,211,102,0.4); text-align:center;">
+                    <div style="font-weight:bold; color:#25D366; margin-bottom:5px; font-size:0.9rem;"><i class="fa-brands fa-whatsapp"></i> Direct Support</div>
+                    <small style="color:var(--text-muted); display:block; font-size:0.78rem; font-family:monospace; font-weight:bold;">+213 791 14 02 39</small>
+                    <small style="color:var(--text-muted); display:block; font-size:0.75rem;">Instant Phone &amp; WhatsApp</small>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:10px;">
+                <a href="https://wa.me/213791140239?text=Hello%2C%20I%20want%20to%20purchase%20and%20activate%20Quantum%20Commerce%20Pro" target="_blank" class="btn btn-secondary" style="background:#25D366; color:#fff; font-weight:bold; border:none; display:inline-flex; align-items:center; gap:8px; padding:12px 24px; border-radius:10px;">
+                    <i class="fa-brands fa-whatsapp" style="font-size:1.3rem;"></i> <span data-i18n="whatsapp_pay_btn">Fast Payment &amp; Support via WhatsApp (+213 791 14 02 39)</span>
+                </a>
+            </div>
+        </div>
+
+        <form id="license-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <label data-i18n="label_fullname">الاسم الكامل / اسم المحل أو الشركة *</label>
+                <input type="text" class="form-control" required id="form-input-name">
+            </div>
+            <div class="form-group">
+                <label data-i18n="label_phone">رقم الهاتف *</label>
+                <input type="tel" class="form-control" required id="form-input-phone" placeholder="0791140239">
+            </div>
+            <div class="form-group">
+                <label data-i18n="label_email">البريد الإلكتروني الرسمي *</label>
+                <input type="email" class="form-control" required id="form-input-email">
+            </div>
+            <div class="form-group">
+                <label data-i18n="label_lic_type">نوع الترخيص المطلوب *</label>
+                <select class="form-control" required id="form-select-type">
+                    <option value="60000" data-i18n="opt_60k">ترخيص محل تجاري مدى الحياة (60,000 دج)</option>
+                    <option value="150000" data-i18n="opt_150k">ترخيص شركة ومستودعات كبرى (150,000 دج)</option>
+                    <option value="saas" data-i18n="opt_saas">اشتراك صيانة سحابي سنوي</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label data-i18n="label_txid">Payment Receipt / Transaction ID *</label>
+                <input type="text" class="form-control" placeholder="e.g. BaridiMob RIP 00799999004394516724 / CCP Receipt" required id="form-input-txid">
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; padding:16px; font-size:1.1rem; justify-content:center;">
+                <i class="fa-solid fa-check-circle"></i>
+                <span data-i18n="btn_submit_order">تأكيد الدفع واستلام مفتاح الترخيص التجاري</span>
+            </button>
+        </form>
+        <div id="form-success-msg" style="display:none; margin-top:20px; background:rgba(0,230,118,0.15); border:1px solid var(--accent-green); padding:16px; border-radius:10px; text-align:center; color:var(--accent-green); font-weight:700;" data-i18n="msg_order_success">
+            ✅ تم تأكيد استلام طلبك وإثبات الدفع بنجاح! تم توليد وتخصيص كود التفعيل التجاري الخاص بك وسيقوم المستشار بإرساله فوراً إلى هاتفك وبريدك.
+        </div>
+    </div>
+
+    <!-- Official Social Media & Founder Section -->
+    <section style="max-width:800px; margin:40px auto 20px; text-align:center; padding:20px;">
+        <h3 style="color:var(--text-white); margin-bottom:15px; font-size:1.2rem;">
+            <i class="fa-solid fa-globe" style="color:var(--primary-blue);"></i> Connect with the Founder &amp; Follow Official Updates
+        </h3>
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:15px;">
+            <a href="https://www.youtube.com/@Mynd-Rtx" target="_blank" class="btn btn-secondary" style="background:#ff0000; color:#fff; font-weight:bold; border:none; display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border-radius:8px;">
+                <i class="fa-brands fa-youtube" style="font-size:1.2rem;"></i> YouTube (@Mynd-Rtx)
+            </a>
+            <a href="https://www.instagram.com/the_silent.insight/" target="_blank" class="btn btn-secondary" style="background:linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color:#fff; font-weight:bold; border:none; display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border-radius:8px;">
+                <i class="fa-brands fa-instagram" style="font-size:1.2rem;"></i> Instagram (@the_silent.insight)
+            </a>
+            <a href="https://wa.me/213791140239" target="_blank" class="btn btn-secondary" style="background:#25D366; color:#fff; font-weight:bold; border:none; display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border-radius:8px;">
+                <i class="fa-brands fa-whatsapp" style="font-size:1.2rem;"></i> Direct WhatsApp (0791140239)
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        Quantum Commerce Technologies &copy; 2026 — Designed for Global &amp; Local Commerce Success
+    </footer>
+
+    <script>
+        let currentSaasCurrency = 'USD';
+
+        const saasDict = {
+            ar: {
+                btn_download_now: "تحميل البرنامج مباشرة",
+                hero_badge: "المنصة البرمجية الرسمية لإدارة المحلات والشركات 2026",
+                hero_title: "إدارة المبيعات، المخزون، والديون بأعلى دقة وذكاء اصطناعي محلي",
+                hero_desc: "المنصة التجارية المتكاملة المصممة خصيصاً للشركات والمحلات. أسرع كاشير POS، تدقيق الديون والكريدي، وطباعة الفواتير الحرارية A4 و 80mm.",
+                btn_download_windows: "تحميل مثبت الويندوز المباشر (Setup.exe)",
+                plan_free_title: "النسخة التجريبية (Free Demo)",
+                plan_free_desc: "لتجربة المنصة والكاشير في المحل",
+                plan_free_price: "مجاناً 100%",
+                f_pos: "كاشير POS سريع وسلس",
+                f_inventory: "تجربة إدارة المخزن والمبيعات",
+                f_langs: "دعم اللغات الـ 7 الكاملة",
+                btn_try_free: "تنزيل وتجربة مجانية",
+                badge_recommended: "الخيار الأكثر طلباً للتجار",
+                plan_store_title: "الترخيص الدائم للمحلات (Store Perpetual)",
+                plan_store_desc: "ملكية دائمة مدى الحياة لمحل تجاري",
+                f_lifetime: "ترخيص ملكية مدى الحياة لمرة واحدة",
+                f_unlimited: "منتجات ومبيعات وديون غير محدودة",
+                f_ai: "الذكاء الاصطناعي المحلي Quantum AI",
+                f_support: "دعم فني وتثبيت مجاني سنة كاملة",
+                btn_order_store: "طلب تفعيل الرخصة الكرتونية",
+                plan_enterprise_title: "ترخيص الشركات الكبرى (Enterprise Suite)",
+                plan_enterprise_desc: "المؤسسات، الفروع المزدوجة والمستودعات",
+                f_branches: "ربط عدة فروع ومستودعات في وقت واحد",
+                f_cloud: "نسخ احتياطي سحابي تلقائي وتشفر عالي",
+                f_training: "تكوين مخصص وتدريب للعمال والمحاسبين",
+                btn_order_enterprise: "طلب ترخيص شركة",
+                form_title: "نموذج طلب الترخيص والتفعيل الرسمي",
+                form_desc: "أرسل طلبك وسيتواصل معك المستشار التقني هاتفياً لتسليمك كود التفعيل وتثبيت البرنامج فوراً:",
+                label_fullname: "الاسم الكامل / اسم المحل أو الشركة *",
+                label_phone: "رقم الهاتف *",
+                label_email: "البريد الإلكتروني الرسمي *",
+                label_lic_type: "نوع الترخيص المطلوب *",
+                opt_60k: "ترخيص محل تجاري مدى الحياة (60,000 دج)",
+                opt_150k: "ترخيص شركة ومستودعات كبرى (150,000 دج)",
+                opt_saas: "اشتراك صيانة سحابي سنوي",
+                btn_submit_order: "إرسال الطلب واستلام مفتاح الترخيص",
+                msg_order_success: "✅ تم إرسال طلبك بنجاح! سيتواصل معك المستشار التقني هاتفياً وعلى بريدك الإلكتروني لتسليمك كود التفعيل ومساعدتك في التثبيت.",
+                payment_methods_title: "وسائل الدفع المعتمدة للشراء والتفعيل المباشر:",
+                whatsapp_pay_btn: "الدفع والتواصل السريع عبر واتساب",
+                label_txid: "رقم إشعار / وصل الدفع *",
+                btn_contact_founder: "تواصل مع المؤسس (واتساب)"
+            },
+            en: {
+                btn_download_now: "Download Direct Installer",
+                hero_badge: "Official Enterprise Commerce Platform 2026",
+                hero_title: "Sales, Inventory & Debt Management with Local AI Intelligence",
+                hero_desc: "Comprehensive commerce platform tailored for stores and global enterprises. Ultra-fast POS cashier, currency exchange engine, and Thermal A4/80mm receipt printing.",
+                hero_sub: "Comprehensive commerce platform tailored for stores and global enterprises. Ultra-fast POS cashier, currency exchange engine, and Thermal A4/80mm receipt printing.",
+                btn_download_windows: "Download Direct Windows Installer (Setup.exe)",
+                plan_free_title: "Free Demo Edition",
+                plan_free_desc: "Explore platform & POS cashier",
+                plan_free_price: "100% Free",
+                f_pos: "Fast & smooth POS Cashier",
+                f_inventory: "Warehouse & Sales management",
+                f_langs: "Full 7-language support",
+                btn_try_free: "Download Free Trial",
+                badge_recommended: "Most Popular Choice",
+                plan_store_title: "Store Perpetual License",
+                plan_store_desc: "Lifetime ownership for single store",
+                f_lifetime: "One-time lifetime ownership license",
+                f_unlimited: "Unlimited products, sales & debts",
+                f_ai: "Quantum AI Local Companion",
+                f_support: "1-year free installation & support",
+                btn_order_store: "Order Store License",
+                plan_enterprise_title: "Enterprise Multi-Branch Suite",
+                plan_enterprise_desc: "Corporations, multi-store & warehouses",
+                f_branches: "Connect multiple branches & warehouses",
+                f_cloud: "Automated encrypted cloud backups",
+                f_training: "Custom staff & cashier onboarding",
+                btn_order_enterprise: "Order Enterprise Suite",
+                form_title: "Official License Order Form",
+                form_desc: "Submit your order and our technical advisor will call you to deliver your activation key instantly:",
+                label_fullname: "Full Name / Store or Company Name *",
+                label_phone: "Phone Number *",
+                label_email: "Official Email *",
+                label_lic_type: "License Type *",
+                opt_60k: "Store Lifetime License ($390 / 60,000 DZD)",
+                opt_150k: "Enterprise Suite License ($1000 / 150,000 DZD)",
+                opt_saas: "Annual Cloud Maintenance Subscription",
+                btn_submit_order: "Submit Order & Get Key",
+                msg_order_success: "✅ Request submitted successfully! Our technical advisor will contact you shortly.",
+                payment_methods_title: "Accepted Payment Methods for Direct Activation:",
+                whatsapp_pay_btn: "Fast Payment & Support via WhatsApp",
+                label_txid: "Payment Receipt / Transaction ID *",
+                btn_contact_founder: "Contact Founder (WhatsApp)"
+            },
+            fr: {
+                btn_download_now: "Télécharger l'installateur",
+                hero_badge: "Plateforme commerciale officielle 2026",
+                hero_title: "Gérez ventes, stocks et créances avec l'IA locale",
+                hero_desc: "Plateforme commerciale globale. Caisse POS rapide, gestion des dettes et impression A4/80mm.",
+                btn_download_windows: "Télécharger l'installateur Windows (Setup.exe)",
+                plan_free_title: "Édition Démo Gratuite",
+                plan_free_desc: "Explorer l'application et la caisse",
+                plan_free_price: "100% Gratuit",
+                f_pos: "Caisse POS rapide et fluide",
+                f_inventory: "Gestion des stocks et ventes",
+                f_langs: "Support complet en 7 langues",
+                btn_try_free: "Télécharger l'essai gratuit",
+                badge_recommended: "Choix le plus populaire",
+                plan_store_title: "Licence Perpétuelle Magasin",
+                plan_store_desc: "Propriété à vie pour un magasin",
+                f_lifetime: "Licence de propriété permanente à vie",
+                f_unlimited: "Produits, ventes et dettes illimités",
+                f_ai: "Assistant IA Local Quantum",
+                f_support: "Support et installation 1 an offerts",
+                btn_order_store: "Commander la licence magasin",
+                plan_enterprise_title: "Suite Entreprise Multi-Filières",
+                plan_enterprise_desc: "Sociétés, multi-dépôts et entrepôts",
+                f_branches: "Connectez plusieurs succursales et dépôts",
+                f_cloud: "Sauvegardes cloud chiffrées automatiques",
+                f_training: "Formation personnalisée des caissiers",
+                btn_order_enterprise: "Commander la licence entreprise",
+                form_title: "Formulaire de commande de licence",
+                form_desc: "Remplissez vos coordonnées, notre conseiller vous contactera immédiatement :",
+                label_fullname: "Nom complet / Raison sociale *",
+                label_phone: "Téléphone *",
+                label_email: "Email officiel *",
+                label_lic_type: "Type de licence *",
+                opt_60k: "Licence Magasin à Vie (60.000 DZD)",
+                opt_150k: "Licence Entreprise Multi-Dépôts (150.000 DZD)",
+                opt_saas: "Abonnement de maintenance annuel",
+                btn_submit_order: "Envoyer la commande",
+                msg_order_success: "✅ Demande envoyée avec succès !",
+                payment_methods_title: "Moyens de paiement acceptés :",
+                whatsapp_pay_btn: "Paiement rapide via WhatsApp",
+                label_txid: "Numéro de reçu de paiement *",
+                btn_contact_founder: "Contacter le fondateur (WhatsApp)"
+            }
+        };
+
+        function updatePricingDisplays() {
+            const storeEl = document.getElementById('price-store-display');
+            const entEl = document.getElementById('price-enterprise-display');
+            if (currentSaasCurrency === 'USD') {
+                storeEl.innerHTML = '$390 <span style="font-size:1rem; color:var(--text-muted);">(Lifetime Store)</span>';
+                entEl.innerHTML = '$1000 <span style="font-size:1rem; color:var(--text-muted);">(Multi-Branch Suite)</span>';
+            } else if (currentSaasCurrency === 'EUR') {
+                storeEl.innerHTML = '€360 <span style="font-size:1rem; color:var(--text-muted);">(Lifetime Store)</span>';
+                entEl.innerHTML = '€920 <span style="font-size:1rem; color:var(--text-muted);">(Multi-Branch Suite)</span>';
+            } else {
+                storeEl.innerHTML = '60,000 دج <span style="font-size:1rem; color:var(--text-muted);">(6 ملايين سنتيم)</span>';
+                entEl.innerHTML = '150,000 دج <span style="font-size:1rem; color:var(--text-muted);">(15 مليون سنتيم)</span>';
+            }
+        }
+
+        function setSaasLanguage(lang) {
+            const dict = saasDict[lang] || saasDict['en'];
+            document.documentElement.lang = lang;
+            document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (dict[key]) el.textContent = dict[key];
+            });
+        }
+
+        document.getElementById('saas-lang-select').addEventListener('change', (e) => {
+            setSaasLanguage(e.target.value);
+        });
+
+        document.getElementById('saas-curr-select').addEventListener('change', (e) => {
+            currentSaasCurrency = e.target.value;
+            updatePricingDisplays();
+        });
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('license-form').style.display = 'none';
+            document.getElementById('form-success-msg').style.display = 'block';
+        }
+
+        // ✅ Apply English (en) + USD ($) immediately on load (script is at end of body so DOM is ready)
+        setSaasLanguage('en');
+        updatePricingDisplays();
+        document.getElementById('saas-lang-select').value = 'en';
+        document.getElementById('saas-curr-select').value = 'USD';
+    </script>
+</body>
+</html>

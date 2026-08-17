@@ -1,0 +1,48 @@
+/* FontAwesome 6.4.0 Local - System Fallback Icons */
+.fa {
+  font-family: 'Font Awesome 6 Free', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif !important;
+  font-weight: 900 !important;
+}
+/* Fallback to Unicode characters for critical icons */
+.fa-solid.fa-check::before { content: "✓"; }
+.fa-solid.fa-times::before { content: "✕"; }
+.fa-solid.fa-download::before { content: "⬇"; }
+.fa-solid.fa-key::before { content: "🔑"; }
+.fa-solid.fa-cash-register::before { content: "🛒"; }
+.fa-solid.fa-chart-pie::before { content: "📊"; }
+.fa-solid.fa-cart-shopping::before { content: "🛒"; }
+.fa-solid.fa-bag-shopping::before { content: "🛍️"; }
+.fa-solid.fa-warehouse::before { content: "🏭"; }
+.fa-solid.fa-wallet::before { content: "💰"; }
+.fa-solid.fa-hand-holding-dollar::before { content: "🤝"; }
+.fa-solid.fa-chart-line::before { content: "📈"; }
+.fa-solid.fa-gear::before { content: "⚙️"; }
+.fa-solid.fa-right-from-bracket::before { content: "🚪"; }
+.fa-solid.fa-certificate::before { content: "📜"; }
+.fa-solid.fa-shield-halved::before { content: "🛡️"; }
+.fa-solid.fa-bolt::before { content: "⚡"; }
+.fa-solid.fa-brain::before { content: "🧠"; }
+.fa-solid.fa-wifi-slash::before { content: "🚫"; }
+.fa-solid.fa-language::before { content: "🌐"; }
+.fa-solid.fa-database::before { content: "💾"; }
+.fa-solid.fa-play-circle::before { content: "▶️"; }
+.fa-solid.fa-desktop::before { content: "💻"; }
+.fa-solid.fa-film::before { content: "🎬"; }
+.fa-solid.fa-magnifying-glass::before { content: "🔍"; }
+.fa-solid.fa-plus::before { content: "➕"; }
+.fa-solid.fa-rotate::before { content: "🔄"; }
+.fa-solid.fa-file-excel::before { content: "📊"; }
+.fa-solid.fa-file-csv::before { content: "📋"; }
+.fa-solid.fa-file-code::before { content: "📄"; }
+.fa-solid.fa-file-lines::before { content: "📝"; }
+.fa-solid.fa-database::before { content: "💾"; }
+.fa-solid.fa-file-pdf::before { content: "📕"; }
+.fa-solid.fa-user-shield::before { content: "🛡️"; }
+.fa-solid.fa-user::before { content: "👤"; }
+.fa-solid.fa-globe::before { content: "🌍"; }
+.fa-solid.fa-mobile-screen-button::before { content: "📱"; }
+.fa-solid.fa-check-double::before { content: "✅"; }
+.fa-solid.fa-circle-exclamation::before { content: "⚠️"; }
+.fa-solid.fa-circle::before { content: "●"; }
+.fa-solid.fa-arrow-trend-up::before { content: "↗️"; }
+.fa-solid.fa-users::before { content: "👥"; }
