@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://abdelmajidgamer96-tech.github.io/quantum-commerce-pro/logo.png" width="120" alt="Quantum Commerce Pro Logo"/>
+<img src="https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/logo.png" width="120" alt="Quantum Commerce Pro Logo"/>
 
 # Quantum Commerce Pro
 
@@ -9,10 +9,10 @@
 [![Version](https://img.shields.io/badge/version-1.2.6-blueviolet?style=for-the-badge)](https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file)
 [![License](https://img.shields.io/badge/license-Commercial-gold?style=for-the-badge)](https://wa.me/213791140239)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-pro/)
-[![Offline First](https://img.shields.io/badge/Offline-First-22c55e?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-pro/)
+[![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
+[![Offline First](https://img.shields.io/badge/Offline-First-22c55e?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 
-**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-pro/) · [⬇️ تحميل المنصة](https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file) · [💬 طلب تفعيل](https://wa.me/213791140239)**
+**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file) · [💬 طلب تفعيل](https://wa.me/213791140239)**
 
 </div>
 
@@ -114,7 +114,7 @@
 | 💼 لينكدإن | [LinkedIn](https://www.linkedin.com/in/YOUR_PROFILE) |
 | 📸 انستغرام | [Instagram](https://www.instagram.com/YOUR_PROFILE) |
 | 🐦 إكس (X) | [X / Twitter](https://x.com/YOUR_HANDLE) |
-| 🌐 الموقع | [abdelmajidgamer96-tech.github.io](https://abdelmajidgamer96-tech.github.io/quantum-commerce-pro/) |
+| 🌐 الموقع | [abdelmajidgamer96-tech.github.io](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) |
 
 > **ملاحظة:** استبدل YOUR_CHANNEL / YOUR_PROFILE / YOUR_HANDLE بروابطك الفعلية.
 
