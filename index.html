@@ -83,17 +83,24 @@
                 <option value="DZD">&#x1F1E9;&#x1F1FF; DZD (&#x62F;&#x62C;)</option>
                 <option value="EUR">&#x1F1EA;&#x1F1FA; EUR (&euro;)</option>
             </select>
-            <!-- Language Selector -->
-            <select id="saas-lang-select" class="select-box">
-                <option value="en" selected>&#x1F1FA;&#x1F1F8; English</option>
-                <option value="ar">&#x1F1E9;&#x1F1FF; &#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</option>
-                <option value="fr">&#x1F1EB;&#x1F1F7; Fran&ccedil;ais</option>
-                <option value="es">&#x1F1EA;&#x1F1F8; Espa&ntilde;ol</option>
-                <option value="de">&#x1F1E9;&#x1F1EA; Deutsch</option>
-                <option value="ru">&#x1F1F7;&#x1F1FA; &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</option>
-                <option value="ja">&#x1F1EF;&#x1F1F5; &#x65E5;&#x672C;&#x8A9E;</option>
+            <!-- Language Switcher Toggle -->
+            <div id="lang-switcher" style="display:flex; align-items:center; background:#0f131d; border:1px solid rgba(255,255,255,0.12); border-radius:30px; padding:3px; gap:2px;">
+                <button onclick="switchLang('en')" id="btn-lang-en"
+                    style="padding:6px 14px; border-radius:24px; border:none; cursor:pointer; font-weight:700; font-size:0.8rem; transition:all 0.25s; background:var(--primary-blue); color:#fff;">
+                    &#x1F1FA;&#x1F1F8; EN
+                </button>
+                <button onclick="switchLang('ar')" id="btn-lang-ar"
+                    style="padding:6px 14px; border-radius:24px; border:none; cursor:pointer; font-weight:700; font-size:0.8rem; transition:all 0.25s; background:transparent; color:var(--text-muted);">
+                    &#x1F1E9;&#x1F1FF; AR
+                </button>
+            </div>
+            <!-- Hidden select kept for JS compatibility -->
+            <select id="saas-lang-select" style="display:none;">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+                <option value="fr">Français</option>
             </select>
-            <a href="https://www.mediafire.com/file/xjbw2bkzjur72kn/QuantumCommercePro-Setup-v1.0.0.exe/file" target="_blank" class="btn btn-primary">
+            <a href="https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file" target="_blank" class="btn btn-primary">
                 <i class="fa-solid fa-download"></i>
                 <span data-i18n="btn_download_now">Download Windows Setup (.exe)</span>
             </a>
@@ -109,7 +116,7 @@
         <p data-i18n="hero_sub">Comprehensive commerce platform tailored for stores and global enterprises. Ultra-fast POS cashier, currency exchange engine, and Thermal A4/80mm receipt printing.</p>
         
         <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-            <a href="https://www.mediafire.com/file/xjbw2bkzjur72kn/QuantumCommercePro-Setup-v1.0.0.exe/file" target="_blank" class="btn btn-primary" style="font-size:1.1rem; padding:18px 36px;">
+            <a href="https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file" target="_blank" class="btn btn-primary" style="font-size:1.1rem; padding:18px 36px;">
                 <i class="fa-solid fa-download"></i>
                 <span data-i18n="btn_hero_download">Download Direct Setup.exe</span>
             </a>
@@ -154,7 +161,7 @@
                 <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_inventory">تجربة إدارة المخزن والمبيعات</span></li>
                 <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_langs">دعم اللغات الـ 7 الكاملة</span></li>
             </ul>
-            <a href="https://www.mediafire.com/file/xjbw2bkzjur72kn/QuantumCommercePro-Setup-v1.0.0.exe/file" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="btn_try_free">تنزيل وتجربة مجانية</a>
+            <a href="https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file" target="_blank" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="btn_try_free">تنزيل وتجربة مجانية</a>
         </div>
 
         <div class="plan-card featured">
@@ -295,7 +302,7 @@
     </section>
 
     <footer>
-        Quantum Commerce Technologies &copy; 2026 — Designed for Global &amp; Local Commerce Success
+        <span data-i18n="footer_copy">Quantum Commerce Technologies &copy; 2026 — Designed for Global &amp; Local Commerce Success</span>
     </footer>
 
     <script>
@@ -343,7 +350,10 @@
                 payment_methods_title: "وسائل الدفع المعتمدة للشراء والتفعيل المباشر:",
                 whatsapp_pay_btn: "الدفع والتواصل السريع عبر واتساب",
                 label_txid: "رقم إشعار / وصل الدفع *",
-                btn_contact_founder: "تواصل مع المؤسس (واتساب)"
+                btn_contact_founder: "تواصل مع المؤسس (واتساب)",
+                hero_sub: "منصة تجارية متكاملة مصممة للمحلات والشركات. أسرع كاشير POS، محرك صرف العملات، وطباعة الفواتير الحرارية A4 و80mm.",
+                btn_hero_download: "تحميل Setup.exe مباشرة",
+                footer_copy: "Quantum Commerce Technologies &copy; 2026 — مصممة للتجارة العالمية والمحلية"
             },
             en: {
                 btn_download_now: "Download Direct Installer",
@@ -387,7 +397,10 @@
                 payment_methods_title: "Accepted Payment Methods for Direct Activation:",
                 whatsapp_pay_btn: "Fast Payment & Support via WhatsApp",
                 label_txid: "Payment Receipt / Transaction ID *",
-                btn_contact_founder: "Contact Founder (WhatsApp)"
+                btn_contact_founder: "Contact Founder (WhatsApp)",
+                hero_sub: "Comprehensive commerce platform tailored for stores and global enterprises. Ultra-fast POS cashier, currency exchange engine, and Thermal A4/80mm receipt printing.",
+                btn_hero_download: "Download Direct Setup.exe",
+                footer_copy: "Quantum Commerce Technologies &copy; 2026 — Designed for Global &amp; Local Commerce Success"
             },
             fr: {
                 btn_download_now: "Télécharger l'installateur",
@@ -453,15 +466,31 @@
             const dict = saasDict[lang] || saasDict['en'];
             document.documentElement.lang = lang;
             document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (dict[key]) el.textContent = dict[key];
+                if (dict[key]) el.innerHTML = dict[key];
             });
         }
 
+        function switchLang(lang) {
+            // Update toggle button styles
+            document.querySelectorAll('#lang-switcher button').forEach(btn => {
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--text-muted)';
+            });
+            const activeBtn = document.getElementById('btn-lang-' + lang);
+            if (activeBtn) {
+                activeBtn.style.background = 'var(--primary-blue)';
+                activeBtn.style.color = '#fff';
+            }
+            // Save to localStorage
+            localStorage.setItem('qcp_lang', lang);
+            document.getElementById('saas-lang-select').value = lang;
+            setSaasLanguage(lang);
+        }
+
         document.getElementById('saas-lang-select').addEventListener('change', (e) => {
-            setSaasLanguage(e.target.value);
+            switchLang(e.target.value);
         });
 
         document.getElementById('saas-curr-select').addEventListener('change', (e) => {
@@ -475,10 +504,10 @@
             document.getElementById('form-success-msg').style.display = 'block';
         }
 
-        // ✅ Apply English (en) + USD ($) immediately on load (script is at end of body so DOM is ready)
-        setSaasLanguage('en');
+        // ✅ Apply saved language from localStorage on load, fallback to 'en'
+        const savedLang = localStorage.getItem('qcp_lang') || 'en';
+        switchLang(savedLang);
         updatePricingDisplays();
-        document.getElementById('saas-lang-select').value = 'en';
         document.getElementById('saas-curr-select').value = 'USD';
     </script>
 </body>
