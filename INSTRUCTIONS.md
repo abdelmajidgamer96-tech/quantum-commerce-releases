@@ -1,15 +1,15 @@
 # INSTRUCTIONS — Quantum Commerce Pro v1.2.6
 
-## التثبيت خطوة بخطوة
+---
 
-### المتطلبات الأساسية
+# 🇩🇿 التعليمات بالعربية
+
+## متطلبات النظام
 - Windows 10 / 11 (64-bit)
 - مساحة قرص حرة: 200 MB كحد أدنى
 - لا يلزم تثبيت Node.js — مدمج في الحزمة
 
----
-
-### خطوات التثبيت
+## خطوات التثبيت
 
 1. **تحميل الملف:**
    - حمّل `QuantumCommercePro-Setup-v1.1.0.exe` من الرابط الرسمي:
@@ -35,13 +35,9 @@
    - الصق مفتاح التفعيل الذي حصلت عليه
    - اضغط **تفعيل**
 
----
-
 ## الحصول على مفتاح التفعيل
 
-تواصل مع المطور عبر واتساب للحصول على مفتاح الترخيص المناسب:
-
-**واتساب:** https://wa.me/213791140239
+تواصل عبر واتساب: https://wa.me/213791140239
 
 | نوع الترخيص | الوصف |
 |-------------|-------|
@@ -49,60 +45,110 @@
 | QCP-ENTERPRISE | ترخيص مؤسسة متعددة الفروع مدى الحياة |
 | QCP-MAINT | اشتراك صيانة وتحديثات سنوي |
 
----
+## استكشاف الأخطاء
 
-## استكشاف الأخطاء (Troubleshooting)
+### البرنامج لا يفتح بعد النقر على الأيقونة
+1. انتظر 15 ثانية ثم افتح المتصفح يدوياً على: `http://localhost:3000`
+2. تأكد من أن مضاد الفيروسات لا يحجب `node.exe`
+3. شغّل `Start_Quantum_Commerce.bat` من مجلد التثبيت
 
-### المشكلة: البرنامج لا يفتح بعد النقر على الأيقونة
-**الحل:**
-1. انتظر 10-15 ثانية ثم تحقق من شريط المهام
-2. افتح المتصفح يدوياً وانتقل إلى: `http://localhost:3000`
-3. تأكد من أن مضاد الفيروسات لا يحجب `node.exe`
-4. شغّل `Start_Quantum_Commerce.bat` من مجلد التثبيت بدلاً من الأيقونة
-
-### المشكلة: صفحة "Connection Refused" في المتصفح
-**الحل:**
+### صفحة "Connection Refused" في المتصفح
 1. انتظر 30 ثانية إضافية (وقت تحميل قاعدة البيانات)
-2. جرب: `http://127.0.0.1:3000` بدلاً من `localhost:3000`
-3. تحقق من أن المنفذ 3000 غير محجوب من جدار الحماية (Windows Firewall)
+2. جرب: `http://127.0.0.1:3000`
+3. تحقق من أن المنفذ 3000 غير محجوب من Windows Firewall
 
-### المشكلة: مفتاح التفعيل يظهر كغير صالح
-**الحل:**
+### مفتاح التفعيل يظهر كغير صالح
 1. تأكد من نسخ المفتاح كاملاً بدون مسافات زائدة
-2. المفتاح حساس للحالة (uppercase) — لا تغير أحرفه
-3. تواصل مع المطور للتحقق من صحة المفتاح: https://wa.me/213791140239
+2. المفتاح حساس للحالة (uppercase)
+3. تواصل مع المطور: https://wa.me/213791140239
 
-### المشكلة: البرنامج لا يبدأ تلقائياً مع Windows
-**الحل:**
+### البرنامج لا يبدأ تلقائياً مع Windows
 1. شغّل البرنامج يدوياً مرة واحدة كـ Administrator
-2. ادخل الإعدادات وتأكد من تفعيل خيار "بدء التشغيل التلقائي"
-3. تحقق من صلاحيات مجلد التثبيت
-
-### المشكلة: واجهة البرنامج تظهر بلغة غير مطلوبة
-**الحل:**
-1. ادخل الإعدادات > اللغة
-2. اختر اللغة المطلوبة من القائمة (العربية، الفرنسية، الإنجليزية...)
-3. أعد تشغيل البرنامج
-
----
+2. ادخل الإعدادات وفعّل خيار "بدء التشغيل التلقائي"
 
 ## إلغاء التثبيت
-
-1. افتح "إضافة أو إزالة البرامج" (Add or Remove Programs)
+1. افتح "إضافة أو إزالة البرامج"
 2. ابحث عن "Quantum Commerce Pro"
-3. اضغط **إلغاء التثبيت** (Uninstall)
-
-**ملاحظة:** سيتم الاحتفاظ بمجلد البيانات في:
-```
-C:\Program Files\Quantum Commerce Pro\data\
-```
-لحفظ بياناتك في حال إعادة التثبيت.
+3. اضغط **إلغاء التثبيت**
 
 ---
 
-## الدعم الفني
+# 🇺🇸 Instructions in English
 
-للمساعدة والدعم الفني:
-- **واتساب:** https://wa.me/213791140239
-- **الموقع:** https://abdelmajidgamer96-tech.github.io/quantum-commerce-pro/
+## System Requirements
+- Windows 10 / 11 (64-bit)
+- Free disk space: minimum 200 MB
+- No Node.js installation required — bundled inside the package
+
+## Installation Steps
+
+1. **Download the file:**
+   - Download `QuantumCommercePro-Setup-v1.1.0.exe` from the official link:
+     https://www.mediafire.com/file/apafl2syud8fei6/QuantumCommercePro-Setup-v1.1.0.exe/file
+
+2. **Run the setup:**
+   - Right-click on the downloaded file
+   - Select **"Run as Administrator"**
+   - Follow the steps: Next > Next > Install
+
+3. **Default installation path:**
+   ```
+   C:\Program Files\Quantum Commerce Pro\
+   ```
+
+4. **First launch:**
+   - After installation, find the **"Quantum Commerce Pro"** icon on your Desktop
+   - Double-click it to launch the application
+   - Your browser will open automatically at: `http://localhost:3000`
+
+5. **Entering your activation key:**
+   - Go to **Settings** > **License Activation**
+   - Paste the activation key you received
+   - Click **Activate**
+
+## Getting an Activation Key
+
+Contact the developer via WhatsApp: https://wa.me/213791140239
+
+| License Type | Description |
+|--------------|-------------|
+| QCP-STORE | Single store — lifetime ownership |
+| QCP-ENTERPRISE | Multi-branch enterprise — lifetime |
+| QCP-MAINT | Annual maintenance & updates subscription |
+
+## Troubleshooting
+
+### App doesn't open after clicking the icon
+1. Wait 15 seconds then open your browser manually at: `http://localhost:3000`
+2. Make sure your antivirus is not blocking `node.exe`
+3. Run `Start_Quantum_Commerce.bat` from the installation folder as an alternative
+
+### "Connection Refused" page in browser
+1. Wait an additional 30 seconds (database loading time)
+2. Try: `http://127.0.0.1:3000` instead of `localhost`
+3. Check that port 3000 is not blocked by Windows Firewall
+
+### Activation key shows as invalid
+1. Make sure you copied the full key without extra spaces
+2. The key is case-sensitive (must be uppercase)
+3. Contact the developer to verify: https://wa.me/213791140239
+
+### App doesn't start automatically with Windows
+1. Run the app manually once as Administrator
+2. Go to Settings and enable the "Auto-start with Windows" option
+
+## Uninstallation
+1. Open "Add or Remove Programs"
+2. Search for "Quantum Commerce Pro"
+3. Click **Uninstall**
+
+> **Note:** Your data folder will be kept at:
+> `C:\Program Files\Quantum Commerce Pro\data\`
+
+---
+
+## Support / الدعم الفني
+
+- **WhatsApp:** https://wa.me/213791140239
+- **Website / الموقع:** https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/
 - **GitHub Issues:** https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/issues
