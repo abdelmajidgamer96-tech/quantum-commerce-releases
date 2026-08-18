@@ -6,13 +6,13 @@
 
 ### منصة إدارة تجارية ذكية — Sovereign AI Enterprise ERP / POS
 
-[![Version](https://img.shields.io/badge/version-1.2.6--hotfix1-blueviolet?style=for-the-badge)](https://www.mediafire.com/file/26g4fcon7y0166j/QuantumCommercePro-Setup-v1.1.0.exe/file)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://www.mediafire.com/file/26g4fcon7y0166j/QuantumCommercePro-Setup-v1.1.0.exe/file)
+[![Version](https://img.shields.io/badge/version-1.3.0-blueviolet?style=for-the-badge)](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file)
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file)
 [![License](https://img.shields.io/badge/license-Commercial-gold?style=for-the-badge)](https://wa.me/213791140239)
 [![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 [![Offline First](https://img.shields.io/badge/Offline-First-22c55e?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 
-**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://www.mediafire.com/file/26g4fcon7y0166j/QuantumCommercePro-Setup-v1.1.0.exe/file) · [💬 طلب تفعيل](https://wa.me/213791140239)**
+**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file) · [💬 طلب تفعيل](https://wa.me/213791140239)**
 
 </div>
 
@@ -71,7 +71,7 @@
 
 | النوع | الحجم | الرابط |
 |-------|-------|--------|
-| 🔧 Setup Installer | ~40 MB | [تحميل Setup.exe](https://www.mediafire.com/file/26g4fcon7y0166j/QuantumCommercePro-Setup-v1.1.0.exe/file) |
+| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file) |
 | 💬 طلب مفتاح تفعيل | — | [واتساب](https://wa.me/213791140239) |
 
 </div>
@@ -124,7 +124,15 @@
 
 راجع ملف [CHANGELOG.md](CHANGELOG.md) لمشاهدة كامل تاريخ التحديثات.
 
-### v1.2.6-hotfix1 (الإصدار الحالي) — تحديث مهم
+### v1.3.0 (الإصدار الحالي)
+- **قراءة الفواتير تعمل بدون إنترنت** — محرّك القراءة وملفات اللغة (عربي/فرنسي/إنجليزي) مرفقة داخل البرنامج
+- **جدول مراجعة قبل الحفظ** — صحّح الكميات والأسعار التي قرأها الذكاء قبل تسجيلها
+- **فاتورة مورّد جديدة** — تسجّل الشراء وتزيد المخزون معاً، مدفوعة كانت أو دَيناً
+- **الديون باسم العميل الحقيقي** بدل اسم عام
+- **يفتح كنافذة برنامج مستقلة** لا كتبويب متصفح
+- الضغط على الأيقونة مرة ثانية يفتح النافذة بدل ألا يحدث شيء
+
+### v1.2.6-hotfix1
 - **إصلاح فشل التشغيل على بعض الأجهزة** — البيانات تُحفظ الآن في `%APPDATA%` بدل مجلد التثبيت المحمي
 - **نقل تلقائي لبياناتك** عند التحديث من إصدار أقدم — لا تفقد شيئاً
 - إصلاح نافذة تعديل المنتجات
