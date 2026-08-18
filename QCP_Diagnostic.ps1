@@ -37,7 +37,7 @@ Write-Host ""
 Write-Host "[4/7] Port 3000..." -ForegroundColor White
 try{$c=Get-NetTCPConnection -LocalPort 3000 -State Listen -ErrorAction SilentlyContinue
     if($c){$pn=(Get-Process -Id $c.OwningProcess -EA SilentlyContinue).Name
-           C "WARN" "Port 3000 in use by: $pn - app will try port 30001"}
+           C "WARN" "Port 3000 in use by: $pn - app will try port 3001"}
     else{C "OK" "Port 3000 is free"}}
 catch{C "OK" "Port 3000 appears available"}
 # 5. AppData write
