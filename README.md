@@ -42,26 +42,11 @@
 
 ---
 
-## لقطات الشاشة
-
-<!-- TODO: أضف لقطات الشاشة في مجلد screenshots/ ثم احذف هذا التعليق -->
-
-| الكاشير / POS | إدارة المخزون | التقارير والإحصاءات |
-|:---:|:---:|:---:|
-| ![POS Screen](screenshots/pos_screen.png) | ![Inventory](screenshots/inventory.png) | ![Reports](screenshots/reports.png) |
-| الواجهة الرئيسية للمبيعات | إدارة المنتجات والكميات | تحليلات الأداء اليومي |
-
-> **ملاحظة:** لقطات الشاشة قيد الإضافة — تابع التحديثات.
-
----
-
 ## فيديو تعريفي
 
-<!-- TODO: أضف رابط فيديو YouTube بعد رفعه -->
+[![قناة Mynd-Rtx](https://img.shields.io/badge/YouTube-@Mynd--Rtx-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@Mynd-Rtx)
 
-[![Quantum Commerce Pro Demo](https://img.shields.io/badge/YouTube-Demo_Video-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@YOUR_CHANNEL)
-
-> **قريباً:** فيديو شرح كامل للمنصة على YouTube.
+> **قريباً:** فيديو شرح كامل للمنصة على قناة [@Mynd-Rtx](https://www.youtube.com/@Mynd-Rtx).
 
 ---
 
@@ -105,18 +90,12 @@
 
 ## تواصل معنا
 
-<!-- TODO: أضف روابط منصاتك الاجتماعية -->
-
 | المنصة | الرابط |
 |--------|--------|
 | 💬 واتساب | [+213 791 14 02 39](https://wa.me/213791140239) |
-| 📺 يوتيوب | [قناة YouTube](https://www.youtube.com/@YOUR_CHANNEL) |
-| 💼 لينكدإن | [LinkedIn](https://www.linkedin.com/in/YOUR_PROFILE) |
-| 📸 انستغرام | [Instagram](https://www.instagram.com/YOUR_PROFILE) |
-| 🐦 إكس (X) | [X / Twitter](https://x.com/YOUR_HANDLE) |
+| 📺 يوتيوب | [@Mynd-Rtx](https://www.youtube.com/@Mynd-Rtx) |
+| 📸 انستغرام | [the_silent.insight](https://www.instagram.com/the_silent.insight/) |
 | 🌐 الموقع | [abdelmajidgamer96-tech.github.io](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) |
-
-> **ملاحظة:** استبدل YOUR_CHANNEL / YOUR_PROFILE / YOUR_HANDLE بروابطك الفعلية.
 
 ---
 
