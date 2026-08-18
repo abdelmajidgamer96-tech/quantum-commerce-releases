@@ -144,12 +144,13 @@
             <div style="position:absolute; top:-14px; right:30px; background:var(--accent-green); color:#000; padding:4px 16px; border-radius:20px; font-size:0.8rem; font-weight:900;" data-i18n="badge_recommended">الخيار الأكثر طلباً للتجار</div>
             <h3 data-i18n="plan_store_title">الترخيص الدائم للمحلات (Store Perpetual)</h3>
             <p style="color:var(--text-muted);" data-i18n="plan_store_desc">ملكية دائمة مدى الحياة لمحل تجاري</p>
-            <div class="plan-price" id="price-store-display">$390 <span style="font-size:1rem; color:var(--text-muted);">(60,000 دج)</span></div>
+            <div class="plan-price" id="price-store-display">30,000 دج <span style="font-size:1rem; color:var(--text-muted);">(≈ $200)</span></div>
             <ul style="list-style:none; line-height:2.2; color:var(--text-muted); margin-bottom:24px;">
-                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_lifetime">ترخيص ملكية مدى الحياة لمرة واحدة</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_lifetime">ترخيص ملكية مدى الحياة — دفعة واحدة</span></li>
                 <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_unlimited">منتجات ومبيعات وديون غير محدودة</span></li>
                 <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_ai">الذكاء الاصطناعي المحلي Quantum AI</span></li>
-                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_support">دعم فني وتثبيت مجاني سنة كاملة</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_setup">تركيب وإدخال بياناتك وتدريب على الاستخدام</span></li>
+                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_support">دعم فني مباشر عبر الواتساب</span></li>
             </ul>
             <a href="#order-form" class="btn btn-primary" style="width:100%; justify-content:center; background:linear-gradient(135deg, #00e676 0%, #00c853 100%); color:#000;" data-i18n="btn_order_store">طلب تفعيل الرخصة الكرتونية</a>
         </div>
@@ -244,8 +245,7 @@
             <div class="form-group">
                 <label data-i18n="label_lic_type">نوع الترخيص المطلوب *</label>
                 <select class="form-control" required id="form-select-type">
-                    <option value="60000" data-i18n="opt_60k">ترخيص محل تجاري مدى الحياة (60,000 دج)</option>
-                    <option value="saas" data-i18n="opt_saas">اشتراك صيانة سحابي سنوي</option>
+                    <option value="30000" data-i18n="opt_60k">ترخيص محل تجاري مدى الحياة (30,000 دج)</option>
                 </select>
             </div>
             <div class="form-group">
@@ -307,7 +307,8 @@
                 f_lifetime: "ترخيص ملكية مدى الحياة لمرة واحدة",
                 f_unlimited: "منتجات ومبيعات وديون غير محدودة",
                 f_ai: "الذكاء الاصطناعي المحلي Quantum AI",
-                f_support: "دعم فني وتثبيت مجاني سنة كاملة",
+                f_setup: "تركيب وإدخال بياناتك وتدريب على الاستخدام",
+                f_support: "دعم فني مباشر عبر الواتساب",
                 btn_order_store: "طلب تفعيل الرخصة الكرتونية",
                 plan_enterprise_title: "ترخيص الشركات الكبرى (Enterprise Suite)",
                 plan_enterprise_desc: "المؤسسات، الفروع المزدوجة والمستودعات",
@@ -324,7 +325,7 @@
                 label_phone: "رقم الهاتف *",
                 label_email: "البريد الإلكتروني الرسمي *",
                 label_lic_type: "نوع الترخيص المطلوب *",
-                opt_60k: "ترخيص محل تجاري مدى الحياة (60,000 دج)",
+                opt_60k: "ترخيص محل تجاري مدى الحياة (30,000 دج)",
                 opt_150k: "ترخيص شركة ومستودعات كبرى (150,000 دج)",
                 opt_saas: "اشتراك صيانة سحابي سنوي",
                 btn_submit_order: "إرسال الطلب واستلام مفتاح الترخيص",
@@ -357,7 +358,8 @@
                 f_lifetime: "One-time lifetime ownership license",
                 f_unlimited: "Unlimited products, sales & debts",
                 f_ai: "Quantum AI Local Companion",
-                f_support: "1-year free installation & support",
+                f_setup: "Setup, your data entry & usage training",
+                f_support: "Direct support via WhatsApp",
                 btn_order_store: "Order Store License",
                 plan_enterprise_title: "Enterprise Multi-Branch Suite",
                 plan_enterprise_desc: "Corporations, multi-store & warehouses",
@@ -374,7 +376,7 @@
                 label_phone: "Phone Number *",
                 label_email: "Official Email *",
                 label_lic_type: "License Type *",
-                opt_60k: "Store Lifetime License ($390 / 60,000 DZD)",
+                opt_60k: "Store Lifetime License (30,000 DZD / ≈ $200)",
                 opt_150k: "Enterprise Suite License ($1000 / 150,000 DZD)",
                 opt_saas: "Annual Cloud Maintenance Subscription",
                 btn_submit_order: "Submit Order & Get Key",
@@ -406,7 +408,8 @@
                 f_lifetime: "Licence de propriété permanente à vie",
                 f_unlimited: "Produits, ventes et dettes illimités",
                 f_ai: "Assistant IA Local Quantum",
-                f_support: "Support et installation 1 an offerts",
+                f_setup: "Installation, saisie de vos données et formation",
+                f_support: "Support direct via WhatsApp",
                 btn_order_store: "Commander la licence magasin",
                 plan_enterprise_title: "Suite Entreprise Multi-Filières",
                 plan_enterprise_desc: "Sociétés, multi-dépôts et entrepôts",
@@ -423,7 +426,7 @@
                 label_phone: "Téléphone *",
                 label_email: "Email officiel *",
                 label_lic_type: "Type de licence *",
-                opt_60k: "Licence Magasin à Vie (60.000 DZD)",
+                opt_60k: "Licence Magasin à Vie (30.000 DZD / ≈ 200$)",
                 opt_150k: "Licence Entreprise Multi-Dépôts (150.000 DZD)",
                 opt_saas: "Abonnement de maintenance annuel",
                 btn_submit_order: "Envoyer la commande",
@@ -437,16 +440,14 @@
 
         function updatePricingDisplays() {
             const storeEl = document.getElementById('price-store-display');
-            const entEl = document.getElementById('price-enterprise-display');
+            // Enterprise tier now shows "coming soon" statically, so it is not repriced here.
+            if (!storeEl) return;
             if (currentSaasCurrency === 'USD') {
-                storeEl.innerHTML = '$390 <span style="font-size:1rem; color:var(--text-muted);">(Lifetime Store)</span>';
-                entEl.innerHTML = '$1000 <span style="font-size:1rem; color:var(--text-muted);">(Multi-Branch Suite)</span>';
+                storeEl.innerHTML = '$200 <span style="font-size:1rem; color:var(--text-muted);">(Lifetime Store)</span>';
             } else if (currentSaasCurrency === 'EUR') {
-                storeEl.innerHTML = '€360 <span style="font-size:1rem; color:var(--text-muted);">(Lifetime Store)</span>';
-                entEl.innerHTML = '€920 <span style="font-size:1rem; color:var(--text-muted);">(Multi-Branch Suite)</span>';
+                storeEl.innerHTML = '€185 <span style="font-size:1rem; color:var(--text-muted);">(Lifetime Store)</span>';
             } else {
-                storeEl.innerHTML = '60,000 دج <span style="font-size:1rem; color:var(--text-muted);">(6 ملايين سنتيم)</span>';
-                entEl.innerHTML = '150,000 دج <span style="font-size:1rem; color:var(--text-muted);">(15 مليون سنتيم)</span>';
+                storeEl.innerHTML = '30,000 دج <span style="font-size:1rem; color:var(--text-muted);">(3 ملايين سنتيم)</span>';
             }
         }
 
