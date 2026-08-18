@@ -178,16 +178,20 @@
             <a href="#order-form" class="btn btn-primary" style="width:100%; justify-content:center; background:linear-gradient(135deg, #00e676 0%, #00c853 100%); color:#000;" data-i18n="btn_order_store">طلب تفعيل الرخصة الكرتونية</a>
         </div>
 
-        <div class="plan-card">
+        <!-- Enterprise tier is announced as UPCOMING, not sold: multi-branch linking and
+             cloud backup are not implemented yet. Taking $1000 for features that do not
+             exist would burn the trust this whole business depends on. -->
+        <div class="plan-card" style="opacity:0.85;">
+            <div style="position:absolute; top:-14px; right:30px; background:#334155; color:#e2e8f0; padding:4px 16px; border-radius:20px; font-size:0.8rem; font-weight:900;" data-i18n="badge_soon">قريباً</div>
             <h3 data-i18n="plan_enterprise_title">ترخيص الشركات الكبرى (Enterprise Suite)</h3>
-            <p style="color:var(--text-muted);" data-i18n="plan_enterprise_desc">المؤسسات، الفروع المزدوجة والمستودعات</p>
-            <div class="plan-price" id="price-enterprise-display">$1000 <span style="font-size:1rem; color:var(--text-muted);">(150,000 دج)</span></div>
+            <p style="color:var(--text-muted);" data-i18n="plan_enterprise_desc">المؤسسات، الفروع المتعددة والمستودعات</p>
+            <div class="plan-price" style="color:var(--text-muted);" data-i18n="plan_enterprise_price">قيد التطوير</div>
             <ul style="list-style:none; line-height:2.2; color:var(--text-muted); margin-bottom:24px;">
-                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_branches">ربط عدة فروع ومستودعات في وقت واحد</span></li>
-                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_cloud">نسخ احتياطي سحابي تلقائي وتشفير عالي</span></li>
-                <li><i class="fa-solid fa-check" style="color:var(--accent-green);"></i> <span data-i18n="f_training">تكوين مخصص وتدريب للعمال والمحاسبيل</span></li>
+                <li><i class="fa-regular fa-clock" style="color:var(--text-muted);"></i> <span data-i18n="f_branches">ربط عدة فروع ومستودعات في وقت واحد</span></li>
+                <li><i class="fa-regular fa-clock" style="color:var(--text-muted);"></i> <span data-i18n="f_cloud">نسخ احتياطي سحابي تلقائي مشفّر</span></li>
+                <li><i class="fa-regular fa-clock" style="color:var(--text-muted);"></i> <span data-i18n="f_training">تكوين مخصص وتدريب للعمال والمحاسبين</span></li>
             </ul>
-            <a href="#order-form" class="btn btn-primary" style="width:100%; justify-content:center;" data-i18n="btn_order_enterprise">طلب ترخيص شركة</a>
+            <a href="https://wa.me/213791140239?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A5%D8%B4%D8%B9%D8%A7%D8%B1%D9%8A%20%D8%B9%D9%86%D8%AF%20%D8%AA%D9%88%D9%81%D8%B1%20%D8%A8%D8%A7%D9%82%D8%A9%20Enterprise" target="_blank" class="btn btn-secondary" style="width:100%; justify-content:center; background:#1e293b; color:var(--text-muted); border:1px solid var(--border-line);" data-i18n="btn_notify_enterprise">أعلمني عند توفرها</a>
         </div>
     </section>
 
@@ -205,7 +209,7 @@
     <!-- Order & Contact Form -->
     <div class="license-order-box" id="order-form">
         <h2 style="text-align:center; margin-bottom:10px;"><i class="fa-solid fa-paper-plane" style="color:var(--primary-blue);"></i> <span data-i18n="form_title">نموذج طلب الترخيص والتفعيل الرسمي</span></h2>
-        <p style="text-align:center; color:var(--text-muted); margin-bottom:30px;" data-i18n="form_desc">أرسل طلبك وسيتواصل معك المستشار التقني هاتفياً لتسليمك كود التفعيل وتثبيت البرنامج فوراً:</p>
+        <p style="text-align:center; color:var(--text-muted); margin-bottom:30px;" data-i18n="form_desc">املأ بياناتك ثم اضغط الزر — سيفتح واتساب برسالة جاهزة، أرسلها ليصلك مفتاح التفعيل من المؤسس مباشرةً:</p>
 
         <!-- Payment Gateways Box -->
         <div style="background:rgba(15,23,42,0.8); border:1px solid var(--border-line); border-radius:12px; padding:20px; margin-bottom:25px;">
@@ -265,7 +269,6 @@
                 <label data-i18n="label_lic_type">نوع الترخيص المطلوب *</label>
                 <select class="form-control" required id="form-select-type">
                     <option value="60000" data-i18n="opt_60k">ترخيص محل تجاري مدى الحياة (60,000 دج)</option>
-                    <option value="150000" data-i18n="opt_150k">ترخيص شركة ومستودعات كبرى (150,000 دج)</option>
                     <option value="saas" data-i18n="opt_saas">اشتراك صيانة سحابي سنوي</option>
                 </select>
             </div>
@@ -279,7 +282,7 @@
             </button>
         </form>
         <div id="form-success-msg" style="display:none; margin-top:20px; background:rgba(0,230,118,0.15); border:1px solid var(--accent-green); padding:16px; border-radius:10px; text-align:center; color:var(--accent-green); font-weight:700;" data-i18n="msg_order_success">
-            ✅ تم تأكيد استلام طلبك وإثبات الدفع بنجاح! تم توليد وتخصيص كود التفعيل التجاري الخاص بك وسيقوم المستشار بإرساله فوراً إلى هاتفك وبريدك.
+            ✅ سيفتح الآن واتساب برسالة تحتوي بيانات طلبك — اضغط "إرسال" لإتمام الطلب. سيصلك مفتاح التفعيل من المؤسس مباشرةً.
         </div>
     </div>
 
@@ -336,8 +339,11 @@
                 f_cloud: "نسخ احتياطي سحابي تلقائي وتشفر عالي",
                 f_training: "تكوين مخصص وتدريب للعمال والمحاسبين",
                 btn_order_enterprise: "طلب ترخيص شركة",
+                badge_soon: "قريباً",
+                plan_enterprise_price: "قيد التطوير",
+                btn_notify_enterprise: "أعلمني عند توفرها",
                 form_title: "نموذج طلب الترخيص والتفعيل الرسمي",
-                form_desc: "أرسل طلبك وسيتواصل معك المستشار التقني هاتفياً لتسليمك كود التفعيل وتثبيت البرنامج فوراً:",
+                form_desc: "املأ بياناتك ثم اضغط الزر — سيفتح واتساب برسالة جاهزة، أرسلها ليصلك مفتاح التفعيل من المؤسس مباشرةً:",
                 label_fullname: "الاسم الكامل / اسم المحل أو الشركة *",
                 label_phone: "رقم الهاتف *",
                 label_email: "البريد الإلكتروني الرسمي *",
@@ -346,7 +352,7 @@
                 opt_150k: "ترخيص شركة ومستودعات كبرى (150,000 دج)",
                 opt_saas: "اشتراك صيانة سحابي سنوي",
                 btn_submit_order: "إرسال الطلب واستلام مفتاح الترخيص",
-                msg_order_success: "✅ تم إرسال طلبك بنجاح! سيتواصل معك المستشار التقني هاتفياً وعلى بريدك الإلكتروني لتسليمك كود التفعيل ومساعدتك في التثبيت.",
+                msg_order_success: "✅ سيفتح الآن واتساب برسالة تحتوي بيانات طلبك — اضغط \"إرسال\" لإتمام الطلب. سيصلك مفتاح التفعيل من المؤسس مباشرةً.",
                 payment_methods_title: "وسائل الدفع المعتمدة للشراء والتفعيل المباشر:",
                 whatsapp_pay_btn: "الدفع والتواصل السريع عبر واتساب",
                 label_txid: "رقم إشعار / وصل الدفع *",
@@ -383,8 +389,11 @@
                 f_cloud: "Automated encrypted cloud backups",
                 f_training: "Custom staff & cashier onboarding",
                 btn_order_enterprise: "Order Enterprise Suite",
+                badge_soon: "COMING SOON",
+                plan_enterprise_price: "In development",
+                btn_notify_enterprise: "Notify me when available",
                 form_title: "Official License Order Form",
-                form_desc: "Submit your order and our technical advisor will call you to deliver your activation key instantly:",
+                form_desc: "Fill in your details, then press the button — WhatsApp opens with your order ready to send. The founder delivers your activation key directly:",
                 label_fullname: "Full Name / Store or Company Name *",
                 label_phone: "Phone Number *",
                 label_email: "Official Email *",
@@ -393,7 +402,7 @@
                 opt_150k: "Enterprise Suite License ($1000 / 150,000 DZD)",
                 opt_saas: "Annual Cloud Maintenance Subscription",
                 btn_submit_order: "Submit Order & Get Key",
-                msg_order_success: "✅ Request submitted successfully! Our technical advisor will contact you shortly.",
+                msg_order_success: "✅ WhatsApp is opening with your order details — press Send to complete it. The founder will deliver your activation key directly.",
                 payment_methods_title: "Accepted Payment Methods for Direct Activation:",
                 whatsapp_pay_btn: "Fast Payment & Support via WhatsApp",
                 label_txid: "Payment Receipt / Transaction ID *",
@@ -429,8 +438,11 @@
                 f_cloud: "Sauvegardes cloud chiffrées automatiques",
                 f_training: "Formation personnalisée des caissiers",
                 btn_order_enterprise: "Commander la licence entreprise",
+                badge_soon: "BIENTÔT",
+                plan_enterprise_price: "En développement",
+                btn_notify_enterprise: "Prévenez-moi",
                 form_title: "Formulaire de commande de licence",
-                form_desc: "Remplissez vos coordonnées, notre conseiller vous contactera immédiatement :",
+                form_desc: "Remplissez vos coordonnées, puis cliquez — WhatsApp s'ouvre avec votre commande prête à envoyer :",
                 label_fullname: "Nom complet / Raison sociale *",
                 label_phone: "Téléphone *",
                 label_email: "Email officiel *",
@@ -439,7 +451,7 @@
                 opt_150k: "Licence Entreprise Multi-Dépôts (150.000 DZD)",
                 opt_saas: "Abonnement de maintenance annuel",
                 btn_submit_order: "Envoyer la commande",
-                msg_order_success: "✅ Demande envoyée avec succès !",
+                msg_order_success: "✅ WhatsApp s'ouvre avec votre commande — appuyez sur Envoyer pour la finaliser.",
                 payment_methods_title: "Moyens de paiement acceptés :",
                 whatsapp_pay_btn: "Paiement rapide via WhatsApp",
                 label_txid: "Numéro de reçu de paiement *",
@@ -500,12 +512,40 @@
 
         function handleFormSubmit(e) {
             e.preventDefault();
+
+            // The order MUST actually reach the founder. This page is static (GitHub
+            // Pages, no backend), so the submission is delivered over WhatsApp with
+            // every field pre-filled. Previously this handler only showed a success
+            // message and silently discarded the order -- a paying customer would sit
+            // waiting for an activation key that was never requested from anyone.
+            const name  = (document.getElementById('form-input-name').value  || '').trim();
+            const phone = (document.getElementById('form-input-phone').value || '').trim();
+            const email = (document.getElementById('form-input-email').value || '').trim();
+            const txid  = (document.getElementById('form-input-txid').value  || '').trim();
+            const typeSel = document.getElementById('form-select-type');
+            const typeLabel = typeSel.options[typeSel.selectedIndex].text;
+
+            const msg =
+                'طلب ترخيص Quantum Commerce Pro\n' +
+                '-----------------------------\n' +
+                'الاسم / المحل: ' + name + '\n' +
+                'الهاتف: ' + phone + '\n' +
+                'البريد: ' + email + '\n' +
+                'نوع الترخيص: ' + typeLabel + '\n' +
+                'إثبات الدفع: ' + txid;
+
+            const waUrl = 'https://wa.me/213791140239?text=' + encodeURIComponent(msg);
+
             document.getElementById('license-form').style.display = 'none';
             document.getElementById('form-success-msg').style.display = 'block';
+
+            // Popup blockers can veto window.open; fall back to navigating this tab.
+            const win = window.open(waUrl, '_blank');
+            if (!win) window.location.href = waUrl;
         }
 
         // ✅ Apply saved language from localStorage on load, fallback to 'en'
-        const savedLang = localStorage.getItem('qcp_lang') || 'en';
+        const savedLang = localStorage.getItem('qcp_lang') || 'ar';
         switchLang(savedLang);
         updatePricingDisplays();
         document.getElementById('saas-curr-select').value = 'USD';
