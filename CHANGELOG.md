@@ -5,6 +5,30 @@ Format: [Version] — Date — Description
 
 ---
 
+## [1.2.6-hotfix1] — 2026-08-18
+
+### 🔴 Critical Fixes (يجب التحديث فوراً)
+
+- **SQLITE_READONLY crash on non-developer machines** — تم إصلاح المشكلة الجذرية:
+  البيانات كانت تُحفظ داخل `C:\Program Files\` (محمي من الكتابة بدون Admin).
+  الحل الدائم: كل البيانات تُحفظ الآن في `%APPDATA%\QuantumCommercePro\` (قابل للكتابة دائماً).
+
+- **EPERM: operation not permitted on .env** — نفس السبب، نفس الإصلاح.
+
+- **`_run_server.cmd` not found error** — الـ launcher كان يحاول كتابة ملف مؤقت داخل Program Files.
+  تم حذف هذا الأسلوب نهائياً — السيرفر يُشتغل مباشرةً.
+
+### ✅ Improvements
+- Server startup timeout increased from 20 → 35 attempts for slow machines
+- Server exit code now logged to `launch.log` for easier diagnostics
+- Added `QCP_Diagnostic.ps1` pre-install compatibility checker
+
+### 📦 Upgrade Instructions
+- Uninstall old version → Reinstall from MediaFire link (same URL, new build)
+- Data in `%APPDATA%\QuantumCommercePro\` is preserved on reinstall
+
+---
+
 ## [1.2.6] — 2026-08-17
 
 ### Fixed
