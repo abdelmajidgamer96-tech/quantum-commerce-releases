@@ -6,13 +6,13 @@
 
 ### منصة إدارة تجارية ذكية — Sovereign AI Enterprise ERP / POS
 
-[![Version](https://img.shields.io/badge/version-1.3.0-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.0/QuantumCommercePro-Setup-v1.3.0.exe)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.0/QuantumCommercePro-Setup-v1.3.0.exe)
+[![Version](https://img.shields.io/badge/version-1.3.3-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.3.3.exe)
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.3.3.exe)
 [![License](https://img.shields.io/badge/license-Commercial-gold?style=for-the-badge)](https://wa.me/213791140239)
 [![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 [![Offline First](https://img.shields.io/badge/Offline-First-22c55e?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 
-**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.0/QuantumCommercePro-Setup-v1.3.0.exe) · [💬 طلب تفعيل](https://wa.me/213791140239)**
+**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.3.3.exe) · [💬 طلب تفعيل](https://wa.me/213791140239)**
 
 </div>
 
@@ -58,7 +58,7 @@
 
 | النوع | الحجم | الرابط |
 |-------|-------|--------|
-| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.0/QuantumCommercePro-Setup-v1.3.0.exe) |
+| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.3.3.exe) |
 | 💬 طلب مفتاح تفعيل | — | [واتساب](https://wa.me/213791140239) |
 
 </div>
@@ -106,7 +106,7 @@
 
 راجع ملف [CHANGELOG.md](CHANGELOG.md) لمشاهدة كامل تاريخ التحديثات.
 
-### v1.3.0 (الإصدار الحالي)
+### v1.3.3 (الإصدار الحالي)
 - **قراءة الفواتير تعمل بدون إنترنت** — محرّك القراءة وملفات اللغة (عربي/فرنسي/إنجليزي) مرفقة داخل البرنامج
 - **جدول مراجعة قبل الحفظ** — صحّح الكميات والأسعار التي قرأها الذكاء قبل تسجيلها
 - **فاتورة مورّد جديدة** — تسجّل الشراء وتزيد المخزون معاً، مدفوعة كانت أو دَيناً
