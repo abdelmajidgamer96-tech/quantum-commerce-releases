@@ -6,13 +6,13 @@
 
 ### منصة إدارة تجارية ذكية — Sovereign AI Enterprise ERP / POS
 
-[![Version](https://img.shields.io/badge/version-1.3.0-blueviolet?style=for-the-badge)](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file)
+[![Version](https://img.shields.io/badge/version-1.3.0-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/v1.3.0/QuantumCommercePro-Setup-v1.3.0.exe)
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/v1.3.0/QuantumCommercePro-Setup-v1.3.0.exe)
 [![License](https://img.shields.io/badge/license-Commercial-gold?style=for-the-badge)](https://wa.me/213791140239)
 [![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 [![Offline First](https://img.shields.io/badge/Offline-First-22c55e?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 
-**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file) · [💬 طلب تفعيل](https://wa.me/213791140239)**
+**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/v1.3.0/QuantumCommercePro-Setup-v1.3.0.exe) · [💬 طلب تفعيل](https://wa.me/213791140239)**
 
 </div>
 
@@ -58,7 +58,7 @@
 
 | النوع | الحجم | الرابط |
 |-------|-------|--------|
-| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://www.mediafire.com/file/70dgv1q51pnsbjs/QuantumCommercePro-Setup-v1.1.0.exe/file) |
+| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/v1.3.0/QuantumCommercePro-Setup-v1.3.0.exe) |
 | 💬 طلب مفتاح تفعيل | — | [واتساب](https://wa.me/213791140239) |
 
 </div>
