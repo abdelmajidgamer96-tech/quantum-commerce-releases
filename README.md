@@ -6,13 +6,13 @@
 
 ### منصة إدارة تجارية ذكية — Sovereign AI Enterprise ERP / POS
 
-[![Version](https://img.shields.io/badge/version-1.4.0-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.4.0.exe)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.4.0.exe)
+[![Version](https://img.shields.io/badge/version-1.4.1-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.1/QuantumCommercePro-Setup-v1.4.1.exe)
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.1/QuantumCommercePro-Setup-v1.4.1.exe)
 [![License](https://img.shields.io/badge/license-Commercial-gold?style=for-the-badge)](https://wa.me/213791140239)
 [![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 [![Offline First](https://img.shields.io/badge/Offline-First-22c55e?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
 
-**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.4.0.exe) · [💬 طلب تفعيل](https://wa.me/213791140239)**
+**[🌐 الموقع الرسمي](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/) · [⬇️ تحميل المنصة](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.1/QuantumCommercePro-Setup-v1.4.1.exe) · [💬 طلب تفعيل](https://wa.me/213791140239)**
 
 </div>
 
@@ -58,7 +58,7 @@
 
 | النوع | الحجم | الرابط |
 |-------|-------|--------|
-| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.3.3/QuantumCommercePro-Setup-v1.4.0.exe) |
+| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.1/QuantumCommercePro-Setup-v1.4.1.exe) |
 | 💬 طلب مفتاح تفعيل | — | [واتساب](https://wa.me/213791140239) |
 
 </div>
@@ -106,7 +106,12 @@
 
 راجع ملف [CHANGELOG.md](CHANGELOG.md) لمشاهدة كامل تاريخ التحديثات.
 
-### v1.4.0 (الإصدار الحالي)
+### v1.4.1 (الإصدار الحالي)
+- **إصلاح خطير: تأكيد الدفع بدون إدخال أي مبلغ كان يُسجَّل كـ"مدفوع بالكامل"** — الآن يُرفض ويطلب إدخال المبلغ فعلياً
+- **خصم على الكاشير والمشتريات** — نسبة مئوية قابلة للتفعيل، تُحسب قبل الضريبة بالكاشير وعلى التكلفة الفعلية بالمشتريات
+- **إصلاح تكرار الأصناف عند استيراد عدة فواتير دفعة واحدة بالذكاء الاصطناعي** — كان النموذج المحلي أحياناً يكرر صنفاً من إجابته الخاصة، فيتضاعف الرقم الإجمالي بصمت
+
+### v1.4.0
 - **نظام ترخيص واشتراك صيانة حقيقي** — تفعيل مفتاح دائم لمتجرك، مع اشتراك صيانة سنوي اختياري
 - **قفل شاشة بكود PIN** — احمِ بياناتك إذا ابتعدت عن الجهاز
 - **نقطة البيع تُنقص المخزون تلقائياً** بعد كل عملية بيع (كان خللاً موجوداً من قبل)
