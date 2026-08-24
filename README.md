@@ -44,11 +44,11 @@
 
 ---
 
-## فيديو تعريفي  
+## فيديو تعريفي
 
-[![قناة Mynd-Rtx]([https://youtu.be/krGgKg7AyD8?si=0qLVf-YaKRcHXO7d))](https://www.youtube.com/@Mynd-Rtx)
+[![قناة Mynd-Rtx](https://img.shields.io/badge/YouTube-@Mynd--Rtx-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/@Mynd-Rtx)
 
-[@Mynd-Rtx](https://www.youtube.com/@Mynd-Rtx).](http://www.youtube.com/@Mynd-Rtx)
+🎬 [شاهد الفيديو التعريفي الكامل](https://youtu.be/krGgKg7AyD8?si=0qLVf-YaKRcHXO7d) على قناة [@Mynd-Rtx](https://www.youtube.com/@Mynd-Rtx)
 
 ---
 
