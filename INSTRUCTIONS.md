@@ -12,8 +12,8 @@
 ## خطوات التثبيت
 
 1. **تحميل الملف:**
-   - حمّل `QuantumCommercePro-Setup-v1.4.1.exe` من الرابط الرسمي:
-     https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.1/QuantumCommercePro-Setup-v1.4.1.exe
+   - حمّل `QuantumCommercePro-Setup-v1.4.2.exe` من الرابط الرسمي:
+     https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.2/QuantumCommercePro-Setup-v1.4.2.exe
 
 2. **تشغيل الإعداد:**
    - انقر بزر الماوس الأيمن على الملف
@@ -83,8 +83,8 @@
 ## Installation Steps
 
 1. **Download the file:**
-   - Download `QuantumCommercePro-Setup-v1.4.1.exe` from the official link:
-     https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.1/QuantumCommercePro-Setup-v1.4.1.exe
+   - Download `QuantumCommercePro-Setup-v1.4.2.exe` from the official link:
+     https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.2/QuantumCommercePro-Setup-v1.4.2.exe
 
 2. **Run the setup:**
    - Right-click on the downloaded file

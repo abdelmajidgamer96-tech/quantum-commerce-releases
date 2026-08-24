@@ -6,7 +6,7 @@
 
 ### منصة إدارة تجارية ذكية — Sovereign AI Enterprise ERP / POS
 
-[![Version](https://img.shields.io/badge/version-1.4.1-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases)
+[![Version](https://img.shields.io/badge/version-1.4.2-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases)
 [![License](https://img.shields.io/badge/license-Commercial-gold?style=for-the-badge)](https://wa.me/213791140239)
 [![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
@@ -58,7 +58,7 @@
 
 | النوع | الحجم | الرابط |
 |-------|-------|--------|
-| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.1/QuantumCommercePro-Setup-v1.4.1.exe) |
+| 🔧 Setup Installer | ~45 MB | [تحميل Setup.exe](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases/download/V1.4.2/QuantumCommercePro-Setup-v1.4.2.exe) |
 | 💬 طلب مفتاح تفعيل | — | [واتساب](https://wa.me/213791140239) |
 
 </div>
@@ -106,7 +106,10 @@
 
 راجع ملف [CHANGELOG.md](CHANGELOG.md) لمشاهدة كامل تاريخ التحديثات.
 
-### v1.4.1 (الإصدار الحالي)
+### v1.4.2 (الإصدار الحالي)
+- **إصلاح: تعذّر تسجيل مبيعات أو مشتريات بتاريخ قديم** — خانة التاريخ كانت مقفولة على يوم اليوم دائماً؛ الآن تقويم قابل للتعديل، مفيد لإدخال سجلات سابقة (فواتير ورقية قديمة مثلاً)
+
+### v1.4.1
 - **إصلاح خطير: تأكيد الدفع بدون إدخال أي مبلغ كان يُسجَّل كـ"مدفوع بالكامل"** — الآن يُرفض ويطلب إدخال المبلغ فعلياً
 - **خصم على الكاشير والمشتريات** — نسبة مئوية قابلة للتفعيل، تُحسب قبل الضريبة بالكاشير وعلى التكلفة الفعلية بالمشتريات
 - **إصلاح تكرار الأصناف عند استيراد عدة فواتير دفعة واحدة بالذكاء الاصطناعي** — كان النموذج المحلي أحياناً يكرر صنفاً من إجابته الخاصة، فيتضاعف الرقم الإجمالي بصمت
