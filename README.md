@@ -6,7 +6,7 @@
 
 ### منصة إدارة تجارية ذكية — Sovereign AI Enterprise ERP / POS
 
-[![Version](https://img.shields.io/badge/version-1.4.3-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases)
+[![Version](https://img.shields.io/badge/version-1.5.0-blueviolet?style=for-the-badge)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases)
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?style=for-the-badge&logo=windows)](https://github.com/abdelmajidgamer96-tech/quantum-commerce-releases/releases)
 [![License](https://img.shields.io/badge/license-Commercial-gold?style=for-the-badge)](https://wa.me/213791140239)
 [![AI Powered](https://img.shields.io/badge/AI-Powered-ff6b6b?style=for-the-badge)](https://abdelmajidgamer96-tech.github.io/quantum-commerce-releases/)
@@ -106,7 +106,18 @@
 
 راجع ملف [CHANGELOG.md](CHANGELOG.md) لمشاهدة كامل تاريخ التحديثات.
 
-### v1.4.3 (الإصدار الحالي)
+### v1.5.0 (الإصدار الحالي)
+- **نظام دخول حقيقي للكاشير بصلاحيات محددة** — كل موظف يسجّل دخول بحسابه الخاص، ويرى فقط الأقسام المسموحة له؛ إدارة الفريق والإعدادات وإعادة الضبط محصورة بالمدير فقط
+- **إصلاح أمان مهم: إزالة بيانات الدخول الافتراضية عند أول تشغيل** — كل تثبيت جديد الآن يفرض عليك إنشاء بيانات دخول خاصة بك، بدل الاعتماد على بيانات افتراضية معروفة مسبقاً
+- **تقارير موسّعة** — إمكانية تحديد نطاق تاريخ مخصص وعرض هامش الربح
+
+### v1.4.4
+- **لوحة تحكم إدارية جديدة بأسلوب منصات التوصيل** — شريط جانبي منظم، إدارة السائقين، الفريق، العملاء، فلاتر بحث، تقارير، وأسعار مرجعية
+- **إصلاح: قائمة أصناف الكاشير لا تتحدث تلقائياً** — بعد إضافة أو تعديل منتج، كانت الكاشير تحتاج إعادة تشغيل لتظهر التغييرات؛ الآن تتحدث فوراً
+- **فاتورة شراء متعددة الأصناف يدوياً + تتبع البضاعة التالفة أو الناقصة**
+- **إصلاح: زر النسخ الاحتياطي كان يُنزّل نفس الملف مرتين**
+
+### v1.4.3
 - **إصلاح: زر "بيع جديد" مكرر بشريط العنوان** — كان يظهر بجانب زر "إنشاء" بصفحة المبيعات ويؤديان لنفس النموذج، مما يُربك المستخدم غير التقني. تم حذف الزر المكرر والإبقاء على زر واحد واضح داخل صفحة المبيعات
 
 ### v1.4.2
